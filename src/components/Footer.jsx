@@ -1,39 +1,40 @@
 import { RIHAI_DATA } from "../data/rihaiData";
-import { Scale, ArrowUpRight, Phone, Mail, Globe } from "lucide-react";
+import rihaaiLogoLight from "../assets/rihaai-logo-light.png";
+import { ArrowUpRight, Phone, Mail, Globe } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#181715] text-[#ABA496] pt-16 pb-12 border-t border-[#292723]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#292723]">
-          {/* Col 1: About & Mission */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-[#B85042] flex items-center justify-center text-white">
-                <Scale className="w-4 h-4" />
-              </div>
-              <span className="font-poppins text-2xl font-bold tracking-tight text-[#FAF9F5]">
-                Project Rihaai
-              </span>
-            </div>
+    <footer className="bg-[#181715] text-[#CFC8BA] pt-16 pb-12 border-t border-[#2B2925]">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/12">
+          {/* Col 1: Official White+Red Rihaai Logo & Mission */}
+          <div className="lg:col-span-5 space-y-5">
+            <a href="#" className="inline-block" aria-label="Rihaai Home">
+              <img
+                src={rihaaiLogoLight}
+                alt="Rihaai — Unpricing Freedom"
+                className="h-12 w-auto object-contain select-none"
+              />
+            </a>
 
-            <p className="text-sm font-roboto text-[#ABA496] leading-relaxed max-w-sm">
-              An initiative of <strong className="text-white">TYCIA Foundation</strong> in collaboration
-              with <strong className="text-white">Project Second Chance</strong>. Bridging the gap
-              between judicial bail and actual release for underprivileged undertrials across India.
+            <p className="text-[14px] font-roboto text-[#CFC8BA] leading-[1.65] max-w-[40ch]">
+              An initiative of <strong className="text-white">TYCIA Foundation</strong> in
+              collaboration with <strong className="text-white">Project Second Chance</strong>.
+              Bridging the gap between judicial bail and actual release for underprivileged
+              undertrials across India.
             </p>
 
-            <div className="text-xs font-mono text-[#857F73]">
+            <p className="text-[12px] font-mono text-[#9E9789]">
               “Systemic change starts with awareness.”
-            </div>
+            </p>
           </div>
 
           {/* Col 2: Navigation Links */}
-          <div className="lg:col-span-3 space-y-3 font-poppins">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-              Exploration
+          <div className="lg:col-span-3 space-y-3.5">
+            <h4 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
+              Explore Rihaai
             </h4>
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2.5 text-[13.5px] font-poppins">
               <li>
                 <a href="#crisis" className="hover:text-white transition-colors">
                   The Undertrial Crisis
@@ -51,17 +52,17 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="#khel" className="hover:text-white transition-colors">
-                  Khel Rihaai Ka (Journey)
+                  Khel Rihaai Ka
                 </a>
               </li>
               <li>
                 <a href="#eligibility" className="hover:text-white transition-colors">
-                  Eligibility & Safeguards
+                  Eligibility &amp; Safeguards
                 </a>
               </li>
               <li>
                 <a href="#impact" className="hover:text-white transition-colors">
-                  Fund Freedom (Donate)
+                  Fund Freedom
                 </a>
               </li>
               <li>
@@ -73,17 +74,19 @@ export const Footer = () => {
           </div>
 
           {/* Col 3: Contact Details */}
-          <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
-              Official Contact & Helplines
+          <div className="lg:col-span-4 space-y-4">
+            <h4 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
+              Official Contact &amp; Helplines
             </h4>
-            <div className="space-y-2.5 text-xs text-[#ABA496] font-roboto">
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-3.5 h-3.5 text-[#B85042] shrink-0" />
-                <span>+91 90848-93438 • +91 99994 81241</span>
+            <div className="space-y-3 text-[13.5px] text-[#CFC8BA] font-roboto">
+              <div className="flex items-center gap-2.5 tabular-nums">
+                <Phone className="w-4 h-4 text-[#E66558] shrink-0" />
+                <span>
+                  {RIHAI_DATA.meta.phonePrimary} • {RIHAI_DATA.meta.phoneSecondary}
+                </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-3.5 h-3.5 text-[#B85042] shrink-0" />
+                <Mail className="w-4 h-4 text-[#E66558] shrink-0" />
                 <a
                   href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
                   className="hover:text-white transition-colors"
@@ -92,41 +95,43 @@ export const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Globe className="w-3.5 h-3.5 text-[#B85042] shrink-0" />
+                <Globe className="w-4 h-4 text-[#E66558] shrink-0" />
                 <a
                   href={RIHAI_DATA.meta.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors flex items-center gap-1"
+                  className="hover:text-white transition-colors inline-flex items-center gap-1"
                 >
                   <span>tyciafoundation.org</span>
-                  <ArrowUpRight className="w-3 h-3" />
+                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
 
-            <div className="pt-3">
+            <div className="pt-2">
               <a
                 href={RIHAI_DATA.meta.donationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-poppins font-semibold px-4 py-2 bg-[#B85042] hover:bg-[#9F3E32] text-white rounded-full transition-all"
+                className="inline-flex items-center gap-1.5 h-10 px-5 text-[13px] font-poppins font-semibold bg-[#C93E31] hover:bg-[#A83126] text-white rounded-full transition-colors"
               >
                 <span>Support Campaign on Milaap</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Disclaimer */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-[#625D54] font-roboto">
+        {/* Bottom Legal & Copyright */}
+        <div className="pt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[12px] text-[#9E9789] font-roboto">
           <p>
-            © {new Date().getFullYear()} Project Rihaai. An initiative of TYCIA Foundation (Working since 2011).
+            © {new Date().getFullYear()} Rihaai. An initiative of TYCIA Foundation (Working since
+            2011).
           </p>
-          <p className="text-center md:text-right max-w-xl">
-            Disclaimer: Project Rihaai operates strictly within verified judicial orders. We do not determine guilt,
-            interfere with police/prison procedures, or replace competent legal counsel.
+          <p className="md:text-right max-w-xl leading-relaxed">
+            Disclaimer: Rihaai operates strictly within verified judicial orders. We do not
+            determine guilt, interfere with police or prison procedures, or replace competent legal
+            counsel.
           </p>
         </div>
       </div>

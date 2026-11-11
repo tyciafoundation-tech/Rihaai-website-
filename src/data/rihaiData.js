@@ -1,7 +1,7 @@
 export const RIHAI_DATA = {
   meta: {
-    title: "Project Rihaai",
-    tagline: "Freedom Beyond Bail",
+    title: "Rihaai",
+    tagline: "Unpricing Freedom",
     subtitle:
       "Ensuring that freedom in India is not determined by a prisoner's wallet, but by the universal principles of justice and human dignity.",
     organization: "TYCIA Foundation",
@@ -36,17 +36,17 @@ export const RIHAI_DATA = {
     },
     {
       value: "24,879",
-      label: "Stuck Behind Bars Despite Bail",
+      label: "Detained Despite Bail",
       detail:
         "In 2023 alone, nearly 25,000 undertrials were judicially granted bail but couldn't walk free because they couldn't afford the bond.",
       source: "UTRC National Registry",
     },
     {
-      value: "₹15k – ₹20k",
+      value: "₹15k–₹20k",
       label: "The Cost of Freedom",
       detail:
         "A modest bail bond that is routine for middle-class families acts as an insurmountable lifelong barrier for India's poorest.",
-      source: "Project Rihaai Field Assessment",
+      source: "Rihaai Field Assessment",
     },
   ],
 
@@ -144,7 +144,7 @@ export const RIHAI_DATA = {
       icon: "Users",
       title: "Local Surety Requirement",
       description:
-        "A local surety (family member or community guarantor) is essential. Project Rihaai assists with the financial surety or documentation, but does not act as personal surety.",
+        "A local surety (family member or community guarantor) is essential. Rihaai assists with the financial surety or documentation, but does not act as personal surety.",
     },
     {
       icon: "ShieldCheck",
@@ -168,7 +168,7 @@ export const RIHAI_DATA = {
 
   khelCards: {
     description:
-      "Based on our educational tool 'Khel Rihaai Ka', explore the stark contrast between an ideal release journey and the harsh systemic realities an undertrial faces every day.",
+      "Based on our educational tool 'Khel Rihaai Ka', explore the stark contrast between a supported release journey and the systemic realities an undertrial faces every day.",
     stages: [
       {
         stageName: "Pre-Bail: Day 1 (First Day Inside)",
@@ -252,7 +252,7 @@ export const RIHAI_DATA = {
         stageName: "Post-Bail: Day 133 (The Surety Wall)",
         positive: {
           title: "Affordable & Supported",
-          text: "Project Rihaai verifies your case and steps in to furnish the court FD. With the financial barrier cleared, the Release Order is processed swiftly.",
+          text: "Rihaai verifies your case and steps in to furnish the court FD. With the financial barrier cleared, the Release Order is processed swiftly.",
           type: "positive",
         },
         negative: {
@@ -308,12 +308,12 @@ export const RIHAI_DATA = {
 
   faqs: [
     {
-      q: "What is Project Rihaai?",
-      a: "Project Rihaai ('Release') is an initiative under TYCIA Foundation (working in prisons and social justice since 2011) and Project Second Chance. It specifically supports undertrial prisoners who have already been granted bail by a court but remain incarcerated because their families cannot afford the bail bond or surety amount.",
+      q: "What is Rihaai?",
+      a: "Rihaai ('Release') is an initiative under TYCIA Foundation (working in prisons and social justice since 2011) and Project Second Chance. It specifically supports undertrial prisoners who have already been granted bail by a court but remain incarcerated because their families cannot afford the bail bond or surety amount.",
     },
     {
-      q: "Does Project Rihaai decide who gets bail?",
-      a: "No. Project Rihaai never interferes with judicial discretion. We only assist individuals whose bail has already been formally ordered by a competent court of law. We do not determine guilt or innocence—we simply ensure that poverty does not turn a court-granted liberty into continued incarceration.",
+      q: "Does Rihaai decide who gets bail?",
+      a: "No. Rihaai never interferes with judicial discretion. We only assist individuals whose bail has already been formally ordered by a competent court of law. We do not determine guilt or innocence—we simply ensure that poverty does not turn a court-granted liberty into continued incarceration.",
     },
     {
       q: "How are funds disbursed? Is cash handed out?",
@@ -321,7 +321,7 @@ export const RIHAI_DATA = {
     },
     {
       q: "Why is a local surety still required?",
-      a: "Indian courts typically require a personal or local guarantor (surety) to ensure court attendance. Project Rihaai assists with the financial bond and administrative/documentation bottlenecks, but requires the family or community to provide the personal surety commitment.",
+      a: "Indian courts typically require a personal or local guarantor (surety) to ensure court attendance. Rihaai assists with the financial bond and administrative/documentation bottlenecks, but requires the family or community to provide the personal surety commitment.",
     },
     {
       q: "What happens after an inmate is released?",
@@ -333,4 +333,3 @@ export const RIHAI_DATA = {
     },
   ],
 };
-

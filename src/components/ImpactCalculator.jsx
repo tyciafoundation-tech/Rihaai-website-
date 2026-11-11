@@ -25,71 +25,62 @@ export const ImpactCalculator = () => {
   const inmatesFreed = (currentAmount / 20000).toFixed(1);
   const bondsFunded = Math.floor(currentAmount / 15000);
 
-  // Goal metrics
   const goal = RIHAI_DATA.meta.campaignGoal;
   const raisedSimulated = 245000;
   const percentage = Math.round((raisedSimulated / goal) * 100);
 
   return (
-    <section id="impact" className="py-24 bg-[#FAF9F5] border-t border-[#E8E4DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-3xl mb-14">
-          <div className="text-xs font-mono uppercase tracking-widest text-[#B85042] font-semibold mb-2">
-            Targeted Crowdfunding & Partnership
-          </div>
-          <h2 className="font-poppins text-3xl sm:text-4xl text-[#181715] font-bold tracking-tight mb-4">
+    <section id="impact" className="py-16 sm:py-24 bg-[#FAF9F5] border-t border-[#E2DCCF]">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
+        {/* Left-aligned Header */}
+        <div className="max-w-[65ch] mb-10 sm:mb-12">
+          <h2 className="font-poppins text-[1.75rem] sm:text-[2.25rem] leading-[1.15] tracking-[-0.02em] font-bold text-[#181715]">
             Directly Fund a Prisoner’s Freedom
           </h2>
-          <p className="text-base sm:text-lg text-[#625D54] leading-relaxed font-roboto">
-            Every rupee is dedicated directly toward court-mandated fixed deposits and verified legal compliance.
-            See exactly how your contribution unlocks a real person’s release.
+          <p className="mt-3.5 text-[15px] sm:text-[17px] text-[#4A453E] leading-[1.65] font-roboto">
+            Every rupee goes directly toward court-mandated fixed deposits and verified legal
+            compliance. Select a tier or enter an amount to see the release impact.
           </p>
         </div>
 
-        {/* Campaign Goal Progress Card */}
-        <div className="bg-[#F4F1EA] rounded-3xl p-6 sm:p-8 border border-[#E8E4DA] mb-12">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        {/* Campaign Goal Progress Banner */}
+        <div className="bg-[#F2EDE3] rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
             <div>
-              <span className="text-xs font-mono text-[#857F73] uppercase tracking-wider block">
-                Current Campaign Target: Phase 1 Pilot
-              </span>
-              <span className="font-poppins text-2xl sm:text-3xl font-extrabold text-[#181715]">
+              <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+                Phase 1 Pilot Target
+              </div>
+              <div className="mt-1 font-poppins text-[1.5rem] sm:text-[1.85rem] font-extrabold text-[#181715] tabular-nums">
                 ₹6,00,000 for 30 Undertrials
-              </span>
+              </div>
             </div>
-            <div className="text-right sm:text-right">
-              <span className="text-xs font-mono text-[#B85042] font-semibold block">
+            <div className="text-left sm:text-right">
+              <div className="text-[12px] font-mono text-[#C93E31] font-semibold tabular-nums">
                 {percentage}% REACHED
-              </span>
-              <span className="text-xs text-[#625D54] font-roboto">
+              </div>
+              <div className="text-[13px] text-[#4A453E] font-roboto tabular-nums">
                 ₹2,45,000 raised • 12 lives assisted
-              </span>
+              </div>
             </div>
           </div>
 
-          {/* Progress Bar */}
-          <div className="w-full bg-[#E8E4DA] h-3 rounded-full overflow-hidden mb-3">
+          <div className="w-full bg-[#E2DCCF] h-2.5 rounded-full overflow-hidden">
             <div
-              className="bg-[#B85042] h-full rounded-full transition-all duration-500"
+              className="bg-[#C93E31] h-full rounded-full transition-all duration-500"
               style={{ width: `${percentage}%` }}
             />
           </div>
 
-          <div className="flex justify-between items-center text-xs text-[#625D54] font-roboto">
+          <div className="mt-3 flex flex-wrap justify-between items-center gap-2 text-[12px] text-[#5F594F] font-roboto">
             <span>6-Month Intervention Cycle</span>
-            <span>Target: 30 Releases in NCR & UP</span>
+            <span>Target: 30 Releases in NCR &amp; UP</span>
           </div>
         </div>
 
-        {/* Interactive Calculator Section */}
+        {/* Interactive Calculator Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Preset Tiers */}
+          {/* Left Column: Preset Tiers & Custom Amount */}
           <div className="lg:col-span-7 space-y-4">
-            <label className="text-xs font-mono text-[#857F73] uppercase tracking-wider block mb-2">
-              Select Support Tier
-            </label>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {RIHAI_DATA.donationTiers.map((tier) => {
                 const isSelected = selectedAmount === tier.amount && !customAmount;
@@ -97,41 +88,46 @@ export const ImpactCalculator = () => {
                 return (
                   <button
                     key={tier.amount}
+                    type="button"
                     onClick={() => {
                       setSelectedAmount(tier.amount);
                       setCustomAmount("");
                     }}
-                    className={`text-left p-5 rounded-2xl border transition-all flex flex-col justify-between ${
+                    className={`text-left p-6 rounded-2xl border transition-colors flex flex-col justify-between ${
                       isSelected
-                        ? "bg-[#181715] text-white border-[#181715] shadow-xs"
-                        : "bg-white text-[#181715] border-[#E8E4DA] hover:border-[#D9D3C5]"
+                        ? "bg-[#181715] text-white border-[#181715]"
+                        : "bg-white text-[#181715] border-[#E2DCCF] hover:border-[#C5BCA8]"
                     }`}
                   >
                     <div>
-                      <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center justify-between">
                         <span
-                          className={`font-poppins text-2xl font-bold ${
+                          className={`font-poppins text-[1.5rem] font-bold tabular-nums ${
                             isSelected ? "text-white" : "text-[#181715]"
                           }`}
                         >
                           ₹{tier.amount.toLocaleString("en-IN")}
                         </span>
                         <div
-                          className={`w-7 h-7 rounded-lg flex items-center justify-center ${
-                            isSelected ? "bg-white/10 text-white" : "bg-[#FAF9F5] text-[#B85042]"
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                            isSelected ? "bg-white/10 text-white" : "bg-[#FAF9F5] text-[#C93E31]"
                           }`}
                         >
                           <Icon className="w-4 h-4" />
                         </div>
                       </div>
 
-                      <div className="text-xs font-poppins font-semibold uppercase tracking-wider mb-2 text-[#B85042]">
+                      <div
+                        className={`mt-3 text-[13px] font-poppins font-semibold ${
+                          isSelected ? "text-[#E66558]" : "text-[#C93E31]"
+                        }`}
+                      >
                         {tier.title}
                       </div>
 
                       <p
-                        className={`text-xs font-roboto leading-relaxed ${
-                          isSelected ? "text-[#E8E4DA]" : "text-[#625D54]"
+                        className={`mt-2 text-[13.5px] font-roboto leading-[1.55] ${
+                          isSelected ? "text-[#DCD5C7]" : "text-[#4A453E]"
                         }`}
                       >
                         {tier.impact}
@@ -139,8 +135,14 @@ export const ImpactCalculator = () => {
                     </div>
 
                     {tier.popular && (
-                      <div className="mt-4 pt-2 border-t border-white/10 text-[10.5px] font-mono text-amber-300">
-                        ★ Most Crucial Threshold
+                      <div
+                        className={`mt-4 pt-3 border-t text-[11px] font-mono ${
+                          isSelected
+                            ? "border-white/15 text-[#F1C27D]"
+                            : "border-[#F2EDE3] text-[#9A631B]"
+                        }`}
+                      >
+                        Most Crucial Threshold
                       </div>
                     )}
                   </button>
@@ -149,84 +151,85 @@ export const ImpactCalculator = () => {
             </div>
 
             {/* Custom Amount Input */}
-            <div className="pt-2">
-              <div className="bg-white p-4 rounded-2xl border border-[#E8E4DA] flex items-center justify-between">
-                <label className="text-xs font-poppins font-medium text-[#423E38]">
-                  Or enter custom amount (INR):
-                </label>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-[#181715]">₹</span>
-                  <input
-                    type="text"
-                    value={customAmount}
-                    onChange={handleCustomChange}
-                    placeholder="e.g. 50000"
-                    className="w-32 px-3 py-1.5 border border-[#E8E4DA] rounded-lg text-sm font-mono text-[#181715] focus:outline-hidden focus:border-[#B85042]"
-                  />
-                </div>
+            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <label
+                htmlFor="custom-donation-amount"
+                className="text-[14px] font-poppins font-medium text-[#181715]"
+              >
+                Or enter a custom amount (INR)
+              </label>
+              <div className="flex items-center gap-2">
+                <span className="text-[15px] font-semibold text-[#181715]">₹</span>
+                <input
+                  id="custom-donation-amount"
+                  type="text"
+                  inputMode="numeric"
+                  value={customAmount}
+                  onChange={handleCustomChange}
+                  placeholder="e.g. 50000"
+                  className="w-full sm:w-40 h-10 px-3.5 border border-[#D4CCB9] rounded-xl text-[14px] font-mono text-[#181715] tabular-nums focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15"
+                />
               </div>
             </div>
           </div>
 
-          {/* Right Column: Calculated Real-World Impact Breakdown */}
-          <div className="lg:col-span-5 bg-white rounded-3xl p-7 border border-[#E8E4DA] shadow-xs">
-            <div className="text-[11px] font-mono text-[#857F73] uppercase tracking-wider mb-2">
-              Impact Assessment
+          {/* Right Column: Calculated Impact Summary */}
+          <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)]">
+            <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+              Estimated Impact
             </div>
 
-            <div className="font-poppins text-3xl font-extrabold text-[#181715] mb-4">
+            <div className="mt-1 font-poppins text-[2rem] font-extrabold text-[#181715] tabular-nums">
               ₹{currentAmount.toLocaleString("en-IN")}
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#FAF9F5] border border-[#E8E4DA] mb-6 space-y-3 font-roboto">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-[#625D54]">Full Court Bail Bonds Funded</span>
-                <span className="font-mono font-bold text-[#181715]">
+            <div className="mt-5 p-4 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] divide-y divide-[#E2DCCF] font-roboto">
+              <div className="pb-3 flex items-center justify-between gap-4 text-[13.5px]">
+                <span className="text-[#4A453E]">Full Court Bail Bonds</span>
+                <span className="font-mono font-bold text-[#181715] tabular-nums">
                   {bondsFunded} {bondsFunded === 1 ? "Inmate" : "Inmates"}
                 </span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-[#625D54]">Complete Freedom & Reintegration</span>
-                <span className="font-mono font-bold text-[#B85042]">
+              <div className="py-3 flex items-center justify-between gap-4 text-[13.5px]">
+                <span className="text-[#4A453E]">Freedom &amp; Reintegration</span>
+                <span className="font-mono font-bold text-[#C93E31] tabular-nums">
                   ~{inmatesFreed} Individuals
                 </span>
               </div>
-              <div className="flex items-center justify-between text-xs border-t border-[#E8E4DA] pt-2">
-                <span className="text-[#625D54]">Disbursement Mechanism</span>
+              <div className="pt-3 flex items-center justify-between gap-4 text-[13.5px]">
+                <span className="text-[#4A453E]">Disbursement</span>
                 <span className="font-medium text-[#181715]">Court Registry FD</span>
               </div>
             </div>
 
-            <div className="space-y-2 mb-6 text-xs text-[#625D54] font-roboto">
-              <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+            <ul className="mt-6 space-y-2.5 text-[13.5px] text-[#4A453E] font-roboto">
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
                 <span>Zero cash handovers; direct court fixed deposits</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-                <span>Verified by pro-bono advocates and prison legal clinic</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
+                <span>Verified by pro-bono advocates and prison legal clinics</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
                 <span>Eligible for 80G tax benefits under TYCIA Foundation</span>
-              </div>
-            </div>
+              </li>
+            </ul>
 
             <a
               href={RIHAI_DATA.meta.donationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#B85042] hover:bg-[#9F3E32] text-white text-sm font-poppins font-semibold rounded-full shadow-xs hover:shadow transition-all"
+              className="mt-7 w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#C93E31] hover:bg-[#A83126] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
             >
-              <span>Proceed to Verified Campaign Page</span>
+              <span>Proceed to Verified Campaign</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
 
-            <div className="mt-4 text-center">
-              <span className="text-[11px] text-[#857F73] font-roboto">
-                Secured campaign portal hosted on Milaap / Project Second Chance
-              </span>
-            </div>
+            <p className="mt-3.5 text-center text-[12px] text-[#6B655B] font-roboto">
+              Secured campaign portal hosted on Milaap / Project Second Chance
+            </p>
           </div>
         </div>
       </div>

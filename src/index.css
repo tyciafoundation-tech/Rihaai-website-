@@ -7,37 +7,45 @@
   --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Map font-serif to Poppins to ensure crisp modern sans typography everywhere */
-  --font-serif: "Poppins", system-ui, -apple-system, sans-serif;
-
   --color-cream: #FAF9F5;
-  --color-cream-subtle: #F4F1EA;
-  --color-cream-card: #FFFFFF;
-  --color-cream-border: #E8E4DA;
+  --color-stone: #F2EDE3;
+  --color-border: #E2DCCF;
 
-  --color-earth-900: #181715;
-  --color-earth-800: #292723;
-  --color-earth-700: #423E38;
-  --color-earth-600: #625D54;
-  --color-earth-500: #857F73;
-  --color-earth-400: #ABA496;
+  --color-ink: #181715;
+  --color-ink-muted: #4A453E;
+  --color-ink-subtle: #6B655B;
 
-  --color-terracotta-500: #B85042;
-  --color-terracotta-600: #9F3E32;
-  --color-terracotta-700: #822F24;
-
-  --color-amber-gold: #C28E46;
+  --color-crimson: #C93E31;
+  --color-crimson-hover: #A83126;
+  --color-forest: #1F5E43;
 }
 
-body {
-  font-family: var(--font-roboto);
-  background-color: var(--color-cream);
-  color: var(--color-earth-900);
-  -webkit-font-smoothing: antialiased;
-}
+@layer base {
+  html {
+    scroll-padding-top: 84px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins);
+  body {
+    font-family: var(--font-roboto);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-crimson);
+    outline-offset: 2px;
+  }
 }
 
 .font-poppins {
@@ -48,34 +56,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-roboto);
 }
 
-.font-heading {
-  font-family: var(--font-poppins);
-}
-
-.font-serif {
-  font-family: var(--font-poppins);
-}
-
-.font-sans {
-  font-family: var(--font-roboto);
-}
-
 .font-mono {
   font-family: var(--font-mono);
 }
 
-/* Custom subtle scrollbar */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbar matching warm paper palette */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #FAF9F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D9D3C5;
+  background: #D6CFC1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B5AD9E;
+  background: #B4AB99;
 }

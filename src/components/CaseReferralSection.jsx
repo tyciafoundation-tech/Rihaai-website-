@@ -10,7 +10,7 @@ export const CaseReferralSection = () => {
     dateBailGranted: "",
     referrerName: "",
     referrerContact: "",
-    referrerRole: "family", // family | lawyer | social_worker | other
+    referrerRole: "family",
     notes: "",
   });
 
@@ -22,58 +22,58 @@ export const CaseReferralSection = () => {
     setSubmitted(true);
   };
 
+  const inputClass =
+    "w-full h-11 px-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15 transition-colors";
+
   return (
-    <section id="referral" className="py-20 bg-[#F4F1EA] border-t border-[#E8E4DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Column: Context & Helplines */}
+    <section id="referral" className="py-16 sm:py-24 bg-[#F2EDE3] border-t border-[#E2DCCF]">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: Intake Context & Helplines */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <div className="text-xs font-mono uppercase tracking-widest text-[#B85042] font-semibold mb-2">
-                Case Intake & Legal Network
-              </div>
-              <h2 className="font-poppins text-3xl sm:text-4xl text-[#181715] font-bold tracking-tight mb-4">
+              <h2 className="font-poppins text-[1.75rem] sm:text-[2.25rem] leading-[1.15] tracking-[-0.02em] font-bold text-[#181715]">
                 Refer an Undertrial or Join as a Pro-Bono Advocate
               </h2>
-              <p className="text-sm sm:text-base text-[#625D54] leading-relaxed font-roboto">
-                If you know an individual who has already received a bail order from a competent court
-                but cannot be released due to lack of funds or surety, submit their details for legal review.
+              <p className="mt-3.5 text-[15px] sm:text-[16px] text-[#4A453E] leading-[1.65] font-roboto">
+                If you know an individual who has already received a bail order from a competent
+                court but cannot be released due to lack of funds or surety, submit their details
+                for legal review.
               </p>
             </div>
 
-            {/* Direct contact cards */}
-            <div className="space-y-3 pt-2">
-              <div className="bg-white p-4 rounded-2xl border border-[#E8E4DA] flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E8E4DA] flex items-center justify-center text-[#B85042] shrink-0">
+            <div className="space-y-3">
+              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#C93E31] shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div>
-                  <span className="text-[11px] font-mono text-[#857F73] uppercase tracking-wider block">
+                <div className="min-w-0">
+                  <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
                     Direct Case Helpline
-                  </span>
-                  <div className="flex flex-wrap gap-x-3 text-xs sm:text-sm font-poppins font-semibold text-[#181715]">
-                    <a href={`tel:${RIHAI_DATA.meta.phonePrimary}`} className="hover:text-[#B85042]">
+                  </div>
+                  <div className="mt-0.5 flex flex-wrap gap-x-2.5 text-[14px] font-poppins font-semibold text-[#181715] tabular-nums">
+                    <a href={`tel:${RIHAI_DATA.meta.phonePrimary}`} className="hover:text-[#C93E31]">
                       {RIHAI_DATA.meta.phonePrimary}
                     </a>
-                    <span>•</span>
-                    <a href={`tel:${RIHAI_DATA.meta.phoneSecondary}`} className="hover:text-[#B85042]">
+                    <span className="text-[#ABA496]">•</span>
+                    <a href={`tel:${RIHAI_DATA.meta.phoneSecondary}`} className="hover:text-[#C93E31]">
                       {RIHAI_DATA.meta.phoneSecondary}
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white p-4 rounded-2xl border border-[#E8E4DA] flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E8E4DA] flex items-center justify-center text-[#B85042] shrink-0">
+              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#C93E31] shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div>
-                  <span className="text-[11px] font-mono text-[#857F73] uppercase tracking-wider block">
+                <div className="min-w-0">
+                  <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
                     Case Documents Submission
-                  </span>
+                  </div>
                   <a
                     href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
-                    className="text-xs sm:text-sm font-poppins font-semibold text-[#181715] hover:text-[#B85042]"
+                    className="mt-0.5 block text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#C93E31] break-all"
                   >
                     {RIHAI_DATA.meta.emailPrimary}
                   </a>
@@ -81,9 +81,9 @@ export const CaseReferralSection = () => {
               </div>
             </div>
 
-            <div className="bg-[#FAF9F5] p-5 rounded-2xl border border-[#E8E4DA] text-xs font-roboto text-[#625D54] space-y-2">
-              <div className="font-poppins font-semibold text-[#181715] flex items-center gap-1.5">
-                <AlertCircle className="w-4 h-4 text-[#B85042]" />
+            <div className="bg-[#FAF9F5] p-5 rounded-2xl border border-[#E2DCCF] text-[13.5px] font-roboto text-[#4A453E] leading-[1.6] space-y-1.5">
+              <div className="font-poppins font-semibold text-[#181715] flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 text-[#C93E31] shrink-0" />
                 <span>Notice on Submissions</span>
               </div>
               <p>
@@ -95,20 +95,21 @@ export const CaseReferralSection = () => {
 
           {/* Right Column: Referral Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E8E4DA] shadow-xs">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)]">
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
-                  <div className="w-14 h-14 bg-emerald-50 text-emerald-700 rounded-full flex items-center justify-center mx-auto border border-emerald-200">
-                    <CheckCircle2 className="w-8 h-8" />
+                  <div className="w-14 h-14 bg-[#1F5E43]/10 text-[#1F5E43] rounded-full flex items-center justify-center mx-auto border border-[#1F5E43]/25">
+                    <CheckCircle2 className="w-7 h-7" />
                   </div>
-                  <h3 className="font-poppins text-2xl font-bold text-[#181715]">
+                  <h3 className="font-poppins text-[22px] font-bold text-[#181715]">
                     Referral Received
                   </h3>
-                  <p className="text-sm font-roboto text-[#625D54] max-w-md mx-auto leading-relaxed">
+                  <p className="text-[15px] font-roboto text-[#4A453E] max-w-md mx-auto leading-[1.6]">
                     Thank you for submitting this case for review. Our legal coordinator will review
-                    the provided details and reach out within 48 to 72 hours for document verification.
+                    the details and reach out within 48 to 72 hours for document verification.
                   </p>
                   <button
+                    type="button"
                     onClick={() => {
                       setSubmitted(false);
                       setFormData({
@@ -122,7 +123,7 @@ export const CaseReferralSection = () => {
                         notes: "",
                       });
                     }}
-                    className="inline-flex items-center text-xs font-poppins font-semibold px-4 py-2 rounded-full border border-[#D9D3C5] hover:bg-[#FAF9F5] text-[#181715]"
+                    className="inline-flex items-center justify-center h-10 px-5 text-[13px] font-poppins font-semibold rounded-full border border-[#D4CCB9] hover:bg-[#FAF9F5] text-[#181715] transition-colors"
                   >
                     Submit Another Referral
                   </button>
@@ -131,7 +132,7 @@ export const CaseReferralSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Inmate Full Name *
                       </label>
                       <input
@@ -140,12 +141,12 @@ export const CaseReferralSection = () => {
                         value={formData.inmateName}
                         onChange={(e) => setFormData({ ...formData, inmateName: e.target.value })}
                         placeholder="e.g. Vinay Kumar"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Prison / Jail Facility *
                       </label>
                       <input
@@ -156,27 +157,28 @@ export const CaseReferralSection = () => {
                           setFormData({ ...formData, prisonFacility: e.target.value })
                         }
                         placeholder="e.g. Central Jail Tihar #4"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Bail Bond Amount (INR)
                       </label>
                       <input
                         type="text"
+                        inputMode="numeric"
                         value={formData.bailAmount}
                         onChange={(e) => setFormData({ ...formData, bailAmount: e.target.value })}
                         placeholder="e.g. 15000"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Approx. Date Bail Granted
                       </label>
                       <input
@@ -185,14 +187,14 @@ export const CaseReferralSection = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, dateBailGranted: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Your Name (Referrer) *
                       </label>
                       <input
@@ -203,12 +205,12 @@ export const CaseReferralSection = () => {
                           setFormData({ ...formData, referrerName: e.target.value })
                         }
                         placeholder="e.g. Advocate Rajesh / Sunita Devi"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                         Your Phone / WhatsApp *
                       </label>
                       <input
@@ -219,19 +221,19 @@ export const CaseReferralSection = () => {
                           setFormData({ ...formData, referrerContact: e.target.value })
                         }
                         placeholder="+91 98765 43210"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                        className={inputClass}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                    <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                       Your Relationship / Role
                     </label>
                     <select
                       value={formData.referrerRole}
                       onChange={(e) => setFormData({ ...formData, referrerRole: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] bg-white focus:outline-hidden focus:border-[#B85042]"
+                      className={inputClass}
                     >
                       <option value="family">Immediate Family Member</option>
                       <option value="lawyer">Pro-Bono Advocate / Legal Aid Counsel</option>
@@ -241,7 +243,7 @@ export const CaseReferralSection = () => {
                   </div>
 
                   <div>
-                    <label className="text-xs font-poppins font-medium text-[#423E38] block mb-1.5">
+                    <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
                       Additional Information / Family Circumstances
                     </label>
                     <textarea
@@ -249,15 +251,15 @@ export const CaseReferralSection = () => {
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Brief details about the family's financial situation, whether local surety is available, etc."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E4DA] text-sm text-[#181715] placeholder:text-[#ABA496] focus:outline-hidden focus:border-[#B85042]"
+                      className="w-full p-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15 transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#181715] hover:bg-[#292723] text-white text-xs font-poppins font-semibold rounded-xl shadow-xs transition-all mt-2"
+                    className="w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#181715] hover:bg-[#2E2B27] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
                   >
-                    <Send className="w-3.5 h-3.5" />
+                    <Send className="w-4 h-4" />
                     <span>Submit Case for Legal Review</span>
                   </button>
                 </form>

@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 
 export const App = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF9F5] text-[#181715] selection:bg-[#EAE4D7] selection:text-[#181715]">
+    <div className="min-h-screen flex flex-col bg-[#FAF9F5] text-[#181715]">
       <Navbar />
       <main className="flex-grow">
         <Hero />
