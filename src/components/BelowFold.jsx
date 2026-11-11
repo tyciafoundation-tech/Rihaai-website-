@@ -7,6 +7,7 @@ import { EligibilityCriteria } from "./EligibilityCriteria";
 import { ImpactCalculator } from "./ImpactCalculator";
 import { CaseReferralSection } from "./CaseReferralSection";
 import { FAQ } from "./FAQ";
+import { TeamSection } from "./TeamSection";
 
 /**
  * Lazy-loaded container for below-the-fold sections so the hero paints immediately.
@@ -30,6 +31,7 @@ export default function BelowFold() {
       <ImpactCalculator />
       <CaseReferralSection />
       <FAQ />
+      <TeamSection />
     </>
   );
 }

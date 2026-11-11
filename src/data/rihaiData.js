@@ -332,4 +332,30 @@ export const RIHAI_DATA = {
       a: "Anyone can submit a referral using our verified case referral form below, or reach out directly to projectrihaai@gmail.com or +91 90848-93438 with a copy of the bail order.",
     },
   ],
+  team: [
+    {
+      id: "shivani-kumari",
+      name: "Shivani Kumari",
+      role: "Founder, Rihaai",
+      tagline: "Freedom Beyond Bail | Building Pathways to Freedom, Dignity and Rehabilitation.",
+      linkedin:
+        "https://www.linkedin.com/in/shivani-kumari-b91bb837b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      summary: [
+        "A social development professional and Founder of Rihaai, Shivani works to dismantle financial, legal, and social barriers facing economically disadvantaged and vulnerable individuals in the criminal justice system—bridging the gap between receiving a bail order and securing the surety, bond amount, and release formalities needed to walk free.",
+        "Rooted in grassroots community engagement and prison-based interventions at Tihar Jail with incarcerated individuals and their families, her work spans legal awareness, counselling, case coordination, community mobilisation, resource mobilisation, financial assistance, and post-release rehabilitation—building a compassionate and inclusive support system for restoring dignity, rebuilding family connections, social reintegration, confidence, and independence so no one remains behind bars due to poverty or limited institutional support.",
+      ],
+    },
+    {
+      id: "karan-kumar",
+      name: "Karan Kumar",
+      role: "Co-founder, Rihaai",
+      tagline: "Prison Reform, Access to Justice & Technology-Driven Legal Aid.",
+      linkedin:
+        "https://www.linkedin.com/in/karan-kumar-61746b2b6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      summary: [
+        "Karan Kumar is a social sector practitioner and Co-founder of Rihaai. With a background in Social Work, he is passionate about prison reform, access to justice, and the rights of marginalized communities.",
+        "His work focuses on bridging gaps in the criminal justice system through technology-driven legal aid, community engagement, and innovative social interventions—building a more inclusive and humane justice system where every individual has an opportunity for dignity, freedom, and a second chance.",
+      ],
+    },
+  ],
 };

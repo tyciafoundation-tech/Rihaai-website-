@@ -74,6 +74,11 @@ export const Footer = () => {
                   Refer an Undertrial
                 </a>
               </li>
+              <li>
+                <a href="#team" className="hover:text-white transition-colors">
+                  Team &amp; Leadership
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -93,7 +98,7 @@ export const Footer = () => {
                 <Mail className="w-4 h-4 text-[#E25B4F] shrink-0" aria-hidden="true" />
                 <a
                   href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors inline-flex items-center min-h-[24px]"
                 >
                   {RIHAI_DATA.meta.emailPrimary}
                 </a>
@@ -104,7 +109,7 @@ export const Footer = () => {
                   href={RIHAI_DATA.meta.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors inline-flex items-center gap-1"
+                  className="hover:text-white transition-colors inline-flex items-center gap-1 min-h-[24px]"
                 >
                   <span>tyciafoundation.org</span>
                   <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />

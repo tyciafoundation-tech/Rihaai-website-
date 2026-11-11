@@ -20,6 +20,7 @@ export const Navbar = () => {
     { name: "Khel Rihaai Ka", href: "#khel" },
     { name: "Eligibility", href: "#eligibility" },
     { name: "FAQ", href: "#faq" },
+    { name: "Team", href: "#team" },
   ];
 
   return (

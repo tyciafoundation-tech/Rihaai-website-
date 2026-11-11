@@ -113,7 +113,11 @@
 /* Defer offscreen layout/paint work during initial load */
 main > section:nth-of-type(n+2) {
   content-visibility: auto;
-  contain-intrinsic-size: auto 650px;
+  contain-intrinsic-size: auto 750px;
+}
+
+main > section#team {
+  contain-intrinsic-size: auto 1500px;
 }
 
 /* Custom subtle scrollbar matching warm paper palette */
