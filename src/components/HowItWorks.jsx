@@ -42,7 +42,7 @@ export const HowItWorks = () => {
                   <div className="flex items-baseline gap-3.5 min-w-0">
                     <span
                       className={`font-mono text-[12px] font-semibold tabular-nums shrink-0 ${
-                        isActive ? "text-[#D14A3E]" : "text-[#6B655B]"
+                        isActive ? "text-[#E25B4F]" : "text-[#59534A]"
                       }`}
                     >
                       0{s.step}
@@ -53,7 +53,7 @@ export const HowItWorks = () => {
                       </div>
                       <div
                         className={`text-[12px] font-roboto mt-0.5 truncate ${
-                          isActive ? "text-[#D4CCB9]" : "text-[#6B655B]"
+                          isActive ? "text-[#D4CCB9]" : "text-[#59534A]"
                         }`}
                       >
                         {s.tag}
@@ -62,7 +62,7 @@ export const HowItWorks = () => {
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 shrink-0 transition-transform ${
-                      isActive ? "text-[#D14A3E] translate-x-0.5" : "text-[#ABA496]"
+                      isActive ? "text-[#E25B4F] translate-x-0.5" : "text-[#ABA496]"
                     }`}
                   />
                 </button>
@@ -76,7 +76,7 @@ export const HowItWorks = () => {
               <span className="font-mono text-[12px] font-semibold text-[#9B231B] uppercase tracking-wider tabular-nums">
                 Stage 0{current.step} of 0{steps.length} • {current.tag}
               </span>
-              <span className="font-mono text-[12px] text-[#6B655B] tabular-nums">
+              <span className="font-mono text-[12px] text-[#59534A] tabular-nums">
                 {Math.round(((activeStep + 1) / steps.length) * 100)}% Complete
               </span>
             </div>

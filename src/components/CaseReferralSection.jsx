@@ -23,7 +23,7 @@ export const CaseReferralSection = () => {
   };
 
   const inputClass =
-    "w-full h-11 px-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors";
+    "w-full h-11 px-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#6B655B] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors";
 
   return (
     <section id="referral" className="py-16 sm:py-24 bg-[#F2EDE3] border-t border-[#E2DCCF]">
@@ -45,17 +45,17 @@ export const CaseReferralSection = () => {
             <div className="space-y-3">
               <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#9B231B] shrink-0">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+                  <div className="text-[11px] font-mono text-[#59534A] uppercase tracking-wider">
                     Direct Case Helpline
                   </div>
                   <div className="mt-0.5 flex flex-wrap gap-x-2.5 text-[14px] font-poppins font-semibold text-[#181715] tabular-nums">
                     <a href={`tel:${RIHAI_DATA.meta.phonePrimary}`} className="hover:text-[#9B231B]">
                       {RIHAI_DATA.meta.phonePrimary}
                     </a>
-                    <span className="text-[#ABA496]">•</span>
+                    <span className="text-[#857E71]" aria-hidden="true">•</span>
                     <a href={`tel:${RIHAI_DATA.meta.phoneSecondary}`} className="hover:text-[#9B231B]">
                       {RIHAI_DATA.meta.phoneSecondary}
                     </a>
@@ -65,10 +65,10 @@ export const CaseReferralSection = () => {
 
               <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#9B231B] shrink-0">
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+                  <div className="text-[11px] font-mono text-[#59534A] uppercase tracking-wider">
                     Case Documents Submission
                   </div>
                   <a
@@ -83,7 +83,7 @@ export const CaseReferralSection = () => {
 
             <div className="bg-[#FAF9F5] p-5 rounded-2xl border border-[#E2DCCF] text-[13.5px] font-roboto text-[#4A453E] leading-[1.6] space-y-1.5">
               <div className="font-poppins font-semibold text-[#181715] flex items-center gap-2">
-                <AlertCircle className="w-4 h-4 text-[#9B231B] shrink-0" />
+                <AlertCircle className="w-4 h-4 text-[#9B231B] shrink-0" aria-hidden="true" />
                 <span>Notice on Submissions</span>
               </div>
               <p>
@@ -99,7 +99,7 @@ export const CaseReferralSection = () => {
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-14 h-14 bg-[#1F5E43]/10 text-[#1F5E43] rounded-full flex items-center justify-center mx-auto border border-[#1F5E43]/25">
-                    <CheckCircle2 className="w-7 h-7" />
+                    <CheckCircle2 className="w-7 h-7" aria-hidden="true" />
                   </div>
                   <h3 className="font-poppins text-[22px] font-bold text-[#181715]">
                     Referral Received
@@ -132,10 +132,14 @@ export const CaseReferralSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="inmate-name"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Inmate Full Name *
                       </label>
                       <input
+                        id="inmate-name"
                         type="text"
                         required
                         value={formData.inmateName}
@@ -146,10 +150,14 @@ export const CaseReferralSection = () => {
                     </div>
 
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="prison-facility"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Prison / Jail Facility *
                       </label>
                       <input
+                        id="prison-facility"
                         type="text"
                         required
                         value={formData.prisonFacility}
@@ -164,10 +172,14 @@ export const CaseReferralSection = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="bail-amount"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Bail Bond Amount (INR)
                       </label>
                       <input
+                        id="bail-amount"
                         type="text"
                         inputMode="numeric"
                         value={formData.bailAmount}
@@ -178,10 +190,14 @@ export const CaseReferralSection = () => {
                     </div>
 
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="date-bail-granted"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Approx. Date Bail Granted
                       </label>
                       <input
+                        id="date-bail-granted"
                         type="date"
                         value={formData.dateBailGranted}
                         onChange={(e) =>
@@ -194,10 +210,14 @@ export const CaseReferralSection = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="referrer-name"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Your Name (Referrer) *
                       </label>
                       <input
+                        id="referrer-name"
                         type="text"
                         required
                         value={formData.referrerName}
@@ -210,10 +230,14 @@ export const CaseReferralSection = () => {
                     </div>
 
                     <div>
-                      <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                      <label
+                        htmlFor="referrer-contact"
+                        className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                      >
                         Your Phone / WhatsApp *
                       </label>
                       <input
+                        id="referrer-contact"
                         type="text"
                         required
                         value={formData.referrerContact}
@@ -227,10 +251,14 @@ export const CaseReferralSection = () => {
                   </div>
 
                   <div>
-                    <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                    <label
+                      htmlFor="referrer-role"
+                      className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                    >
                       Your Relationship / Role
                     </label>
                     <select
+                      id="referrer-role"
                       value={formData.referrerRole}
                       onChange={(e) => setFormData({ ...formData, referrerRole: e.target.value })}
                       className={inputClass}
@@ -243,15 +271,19 @@ export const CaseReferralSection = () => {
                   </div>
 
                   <div>
-                    <label className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5">
+                    <label
+                      htmlFor="case-notes"
+                      className="text-[13px] font-poppins font-medium text-[#181715] block mb-1.5"
+                    >
                       Additional Information / Family Circumstances
                     </label>
                     <textarea
+                      id="case-notes"
                       rows={3}
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Brief details about the family's financial situation, whether local surety is available, etc."
-                      className="w-full p-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors"
+                      className="w-full p-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#6B655B] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors"
                     />
                   </div>
 
@@ -259,7 +291,7 @@ export const CaseReferralSection = () => {
                     type="submit"
                     className="w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#181715] hover:bg-[#2E2B27] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                     <span>Submit Case for Legal Review</span>
                   </button>
                 </form>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { RIHAI_DATA } from "../data/rihaiData";
-import rihaaiLogoDark from "../assets/rihaai-logo-dark.png";
+import rihaaiLogoDark from "../assets/rihaai-logo-dark.webp";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 export const Navbar = () => {
@@ -26,8 +26,8 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-[#FAF9F5]/95 backdrop-blur-md border-b border-[#E2DCCF] shadow-[0_1px_2px_rgba(24,23,21,0.04)]"
-          : "bg-[#FAF9F5]/80 backdrop-blur-xs border-b border-transparent"
+          ? "bg-[#FAF9F5]/95 border-b border-[#E2DCCF] shadow-[0_1px_2px_rgba(24,23,21,0.04)]"
+          : "bg-[#FAF9F5] border-b border-transparent"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
@@ -37,9 +37,13 @@ export const Navbar = () => {
             <img
               src={rihaaiLogoDark}
               alt="Rihaai — Unpricing Freedom"
+              width={320}
+              height={137}
+              decoding="async"
+              fetchPriority="high"
               className="h-10 sm:h-11 w-auto object-contain select-none"
             />
-            <span className="hidden xl:block pl-3.5 border-l border-[#E2DCCF] text-[11px] leading-[1.3] text-[#5F594F] font-roboto">
+            <span className="hidden xl:block pl-3.5 border-l border-[#E2DCCF] text-[11px] leading-[1.3] text-[#59534A] font-roboto">
               An initiative by
               <br />
               <strong className="font-poppins font-semibold text-[#181715]">TYCIA Foundation</strong>
@@ -77,7 +81,7 @@ export const Navbar = () => {
               className="inline-flex items-center justify-center gap-1.5 h-9 px-4 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[13px] font-poppins font-semibold rounded-full transition-colors whitespace-nowrap"
             >
               <span>Donate</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
             </a>
           </div>
 
@@ -97,7 +101,7 @@ export const Navbar = () => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#FAF9F5] border-t border-[#E2DCCF] px-5 sm:px-8 py-5 shadow-md">
-          <nav className="flex flex-col divide-y divide-[#E2DCCF]/70">
+          <nav aria-label="Mobile Navigation" className="flex flex-col divide-y divide-[#E2DCCF]/70">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -124,7 +128,7 @@ export const Navbar = () => {
               className="inline-flex items-center justify-center gap-1.5 h-11 text-sm font-poppins font-semibold rounded-full bg-[#9B231B] text-white hover:bg-[#7A1913]"
             >
               <span>Donate Now</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>
         </div>

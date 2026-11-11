@@ -1,5 +1,5 @@
 import { ArrowRight, ShieldCheck, HeartHandshake, Compass } from "lucide-react";
-import rihaaiFreedomImg from "../assets/rihaai-freedom.jpg";
+import rihaaiFreedomImg from "../assets/rihaai-freedom.webp";
 
 export const Hero = () => {
   return (
@@ -26,14 +26,14 @@ export const Hero = () => {
                 className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
               >
                 <span>Fund a Prisoner’s Release</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
 
               <a
                 href="#khel"
                 className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-transparent hover:bg-[#F2EDE3] text-[#181715] text-[14px] font-poppins font-semibold rounded-full border border-[#D4CCB9] transition-colors"
               >
-                <Compass className="w-4 h-4 text-[#9B231B]" />
+                <Compass className="w-4 h-4 text-[#9B231B]" aria-hidden="true" />
                 <span>Explore Khel Rihaai Ka</span>
               </a>
             </div>
@@ -41,7 +41,7 @@ export const Hero = () => {
             {/* Aligned Proof Strip */}
             <div className="mt-10 pt-6 border-t border-[#E2DCCF] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" aria-hidden="true" />
                 <div className="text-[13px] leading-snug text-[#4A453E]">
                   <strong className="block font-poppins font-semibold text-[#181715]">
                     Court Bank FDs
@@ -51,7 +51,7 @@ export const Hero = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <HeartHandshake className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" />
+                <HeartHandshake className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" aria-hidden="true" />
                 <div className="text-[13px] leading-snug text-[#4A453E]">
                   <strong className="block font-poppins font-semibold text-[#181715]">
                     Pro-Bono Vetting
@@ -81,11 +81,15 @@ export const Hero = () => {
                 <img
                   src={rihaaiFreedomImg}
                   alt="Rihaai — Metamorphosis of prison bars into birds of freedom"
+                  width={800}
+                  height={600}
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-[11px] font-mono">
-                  <span className="bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-full">
+                  <span className="bg-black/75 px-2.5 py-1 rounded-full">
                     Bars into Flight
                   </span>
                   <span className="opacity-90">TYCIA Foundation</span>
@@ -97,7 +101,7 @@ export const Hero = () => {
                   “When freedom depends on a surety you cannot pay, poverty itself becomes a prison
                   sentence.”
                 </blockquote>
-                <p className="text-[12px] text-[#5F594F] font-roboto">
+                <p className="text-[12px] text-[#59534A] font-roboto">
                   TYCIA Foundation • Facilitating dignity, release, and second chances since 2011.
                 </p>
               </figcaption>

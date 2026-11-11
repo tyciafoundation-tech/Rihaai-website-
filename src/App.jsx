@@ -1,14 +1,11 @@
+import { lazy, Suspense } from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { CrisisMetrics } from "./components/CrisisMetrics";
-import { VinayStory } from "./components/VinayStory";
-import { HowItWorks } from "./components/HowItWorks";
-import { KhelRihaaiKa } from "./components/KhelRihaaiKa";
-import { EligibilityCriteria } from "./components/EligibilityCriteria";
-import { ImpactCalculator } from "./components/ImpactCalculator";
-import { CaseReferralSection } from "./components/CaseReferralSection";
-import { FAQ } from "./components/FAQ";
-import { Footer } from "./components/Footer";
+
+const BelowFold = lazy(() => import("./components/BelowFold"));
+const Footer = lazy(() =>
+  import("./components/Footer").then((mod) => ({ default: mod.Footer }))
+);
 
 export const App = () => {
   return (
@@ -16,16 +13,13 @@ export const App = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <CrisisMetrics />
-        <VinayStory />
-        <HowItWorks />
-        <KhelRihaaiKa />
-        <EligibilityCriteria />
-        <ImpactCalculator />
-        <CaseReferralSection />
-        <FAQ />
+        <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
+          <BelowFold />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };

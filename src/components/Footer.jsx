@@ -1,5 +1,5 @@
 import { RIHAI_DATA } from "../data/rihaiData";
-import rihaaiLogoLight from "../assets/rihaai-logo-light.png";
+import rihaaiLogoLight from "../assets/rihaai-logo-light.webp";
 import { ArrowUpRight, Phone, Mail, Globe } from "lucide-react";
 
 export const Footer = () => {
@@ -13,6 +13,10 @@ export const Footer = () => {
               <img
                 src={rihaaiLogoLight}
                 alt="Rihaai — Unpricing Freedom"
+                width={320}
+                height={137}
+                loading="lazy"
+                decoding="async"
                 className="h-12 w-auto object-contain select-none"
               />
             </a>
@@ -24,16 +28,16 @@ export const Footer = () => {
               undertrials across India.
             </p>
 
-            <p className="text-[12px] font-mono text-[#9E9789]">
+            <p className="text-[12px] font-mono text-[#A8A194]">
               “Systemic change starts with awareness.”
             </p>
           </div>
 
           {/* Col 2: Navigation Links */}
           <div className="lg:col-span-3 space-y-3.5">
-            <h4 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
+            <h3 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
               Explore Rihaai
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-[13.5px] font-poppins">
               <li>
                 <a href="#crisis" className="hover:text-white transition-colors">
@@ -75,18 +79,18 @@ export const Footer = () => {
 
           {/* Col 3: Contact Details */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
+            <h3 className="text-[11px] font-mono uppercase tracking-wider text-white font-semibold">
               Official Contact &amp; Helplines
-            </h4>
+            </h3>
             <div className="space-y-3 text-[13.5px] text-[#CFC8BA] font-roboto">
               <div className="flex items-center gap-2.5 tabular-nums">
-                <Phone className="w-4 h-4 text-[#D14A3E] shrink-0" />
+                <Phone className="w-4 h-4 text-[#E25B4F] shrink-0" aria-hidden="true" />
                 <span>
                   {RIHAI_DATA.meta.phonePrimary} • {RIHAI_DATA.meta.phoneSecondary}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#D14A3E] shrink-0" />
+                <Mail className="w-4 h-4 text-[#E25B4F] shrink-0" aria-hidden="true" />
                 <a
                   href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
                   className="hover:text-white transition-colors"
@@ -95,7 +99,7 @@ export const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-[#D14A3E] shrink-0" />
+                <Globe className="w-4 h-4 text-[#E25B4F] shrink-0" aria-hidden="true" />
                 <a
                   href={RIHAI_DATA.meta.website}
                   target="_blank"
@@ -103,7 +107,7 @@ export const Footer = () => {
                   className="hover:text-white transition-colors inline-flex items-center gap-1"
                 >
                   <span>tyciafoundation.org</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -116,14 +120,14 @@ export const Footer = () => {
                 className="inline-flex items-center gap-1.5 h-10 px-5 text-[13px] font-poppins font-semibold bg-[#9B231B] hover:bg-[#7A1913] text-white rounded-full transition-colors"
               >
                 <span>Support Campaign on Milaap</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Legal & Copyright */}
-        <div className="pt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[12px] text-[#9E9789] font-roboto">
+        <div className="pt-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[12px] text-[#A8A194] font-roboto">
           <p>
             © {new Date().getFullYear()} Rihaai. An initiative of TYCIA Foundation (Working since
             2011).

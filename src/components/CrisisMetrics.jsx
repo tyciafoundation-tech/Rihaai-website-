@@ -1,5 +1,5 @@
 import { RIHAI_DATA } from "../data/rihaiData";
-import khelBarsImg from "../assets/khel-bars-silhouette.png";
+import khelBarsImg from "../assets/khel-bars-silhouette.webp";
 import { ArrowRight } from "lucide-react";
 
 export const CrisisMetrics = () => {
@@ -37,7 +37,7 @@ export const CrisisMetrics = () => {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#F2EDE3] text-[11px] font-mono text-[#6B655B]">
+              <div className="pt-4 border-t border-[#F2EDE3] text-[11px] font-mono text-[#59534A]">
                 Source: {stat.source}
               </div>
             </div>
@@ -51,6 +51,10 @@ export const CrisisMetrics = () => {
               <img
                 src={khelBarsImg}
                 alt="Illustration of an undertrial prisoner waiting behind bars"
+                width={240}
+                height={263}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -72,7 +76,7 @@ export const CrisisMetrics = () => {
             className="shrink-0 inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#9B231B] transition-colors whitespace-nowrap"
           >
             <span>Read Vinay’s Story</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </a>
         </div>
       </div>

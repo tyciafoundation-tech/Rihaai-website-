@@ -47,7 +47,7 @@ export const ImpactCalculator = () => {
         <div className="bg-[#F2EDE3] rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] mb-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
             <div>
-              <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+              <div className="text-[11px] font-mono text-[#59534A] uppercase tracking-wider">
                 Phase 1 Pilot Target
               </div>
               <div className="mt-1 font-poppins text-[1.5rem] sm:text-[1.85rem] font-extrabold text-[#181715] tabular-nums">
@@ -71,7 +71,7 @@ export const ImpactCalculator = () => {
             />
           </div>
 
-          <div className="mt-3 flex flex-wrap justify-between items-center gap-2 text-[12px] text-[#5F594F] font-roboto">
+          <div className="mt-3 flex flex-wrap justify-between items-center gap-2 text-[12px] text-[#59534A] font-roboto">
             <span>6-Month Intervention Cycle</span>
             <span>Target: 30 Releases in NCR &amp; UP</span>
           </div>
@@ -113,13 +113,13 @@ export const ImpactCalculator = () => {
                             isSelected ? "bg-white/10 text-white" : "bg-[#FAF9F5] text-[#9B231B]"
                           }`}
                         >
-                          <Icon className="w-4 h-4" />
+                          <Icon className="w-4 h-4" aria-hidden="true" />
                         </div>
                       </div>
 
                       <div
                         className={`mt-3 text-[13px] font-poppins font-semibold ${
-                          isSelected ? "text-[#D14A3E]" : "text-[#9B231B]"
+                          isSelected ? "text-[#E0685D]" : "text-[#9B231B]"
                         }`}
                       >
                         {tier.title}
@@ -139,7 +139,7 @@ export const ImpactCalculator = () => {
                         className={`mt-4 pt-3 border-t text-[11px] font-mono ${
                           isSelected
                             ? "border-white/15 text-[#F1C27D]"
-                            : "border-[#F2EDE3] text-[#9A631B]"
+                            : "border-[#F2EDE3] text-[#855314]"
                         }`}
                       >
                         Most Crucial Threshold
@@ -175,7 +175,7 @@ export const ImpactCalculator = () => {
 
           {/* Right Column: Calculated Impact Summary */}
           <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)]">
-            <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+            <div className="text-[11px] font-mono text-[#59534A] uppercase tracking-wider">
               Estimated Impact
             </div>
 
@@ -204,15 +204,15 @@ export const ImpactCalculator = () => {
 
             <ul className="mt-6 space-y-2.5 text-[13.5px] text-[#4A453E] font-roboto">
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>Zero cash handovers; direct court fixed deposits</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>Verified by pro-bono advocates and prison legal clinics</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#1F5E43] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>Eligible for 80G tax benefits under TYCIA Foundation</span>
               </li>
             </ul>
@@ -224,10 +224,10 @@ export const ImpactCalculator = () => {
               className="mt-7 w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
             >
               <span>Proceed to Verified Campaign</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
             </a>
 
-            <p className="mt-3.5 text-center text-[12px] text-[#6B655B] font-roboto">
+            <p className="mt-3.5 text-center text-[12px] text-[#59534A] font-roboto">
               Secured campaign portal hosted on Milaap / Project Second Chance
             </p>
           </div>

@@ -1,5 +1,5 @@
 import { RIHAI_DATA } from "../data/rihaiData";
-import bailBondHandsImg from "../assets/bail-bond-hands.png";
+import bailBondHandsImg from "../assets/bail-bond-hands.webp";
 import { ArrowRight } from "lucide-react";
 
 export const VinayStory = () => {
@@ -24,56 +24,8 @@ export const VinayStory = () => {
     <section id="case-study" className="py-16 sm:py-24 bg-[#FAF9F5]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left Column: Visual Bail Bond Illustration + Structured Dossier */}
-          <div className="lg:col-span-5">
-            <div className="bg-white rounded-2xl border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)] overflow-hidden">
-              <div className="bg-[#EFECE4] border-b border-[#E2DCCF] px-4 pt-4">
-                <img
-                  src={bailBondHandsImg}
-                  alt="Illustration of hands bound by a financial bail bond"
-                  className="w-full aspect-[767/401] object-contain"
-                />
-              </div>
-
-              <div className="p-6 sm:p-7 border-b border-[#E2DCCF] flex items-baseline justify-between gap-4">
-                <h3 className="font-poppins text-[20px] font-bold text-[#181715]">
-                  {vinayCaseStudy.name}’s Case Dossier
-                </h3>
-                <span className="text-[12px] font-mono text-[#6B655B] tabular-nums shrink-0">
-                  Case #014
-                </span>
-              </div>
-
-              <dl className="divide-y divide-[#F2EDE3] px-6 sm:px-7">
-                {dossierRows.map((row) => (
-                  <div
-                    key={row.label}
-                    className="py-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 items-baseline"
-                  >
-                    <dt className="text-[12px] font-mono text-[#6B655B] uppercase tracking-wide">
-                      {row.label}
-                    </dt>
-                    <dd className="sm:col-span-2 text-[14px] font-roboto text-[#181715]">
-                      <span className={row.highlight || ""}>{row.value}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              <div className="p-6 sm:p-7 bg-[#F2EDE3]/70 border-t border-[#E2DCCF]">
-                <div className="text-[11px] font-mono uppercase tracking-wider text-[#5F594F] font-semibold mb-1.5">
-                  Primary Household Impact
-                </div>
-                <p className="text-[14px] font-roboto text-[#3D3933] leading-[1.6]">
-                  Widowed mother living in an informal settlement, earning daily domestic wages.
-                  Without Vinay’s income, the family faced immediate rent default and food insecurity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Editorial Prose */}
-          <div className="lg:col-span-7">
+          {/* Editorial Prose (first in DOM for h2 -> h3 sequential order, right column on desktop) */}
+          <div className="lg:col-span-7 lg:order-2">
             <h2 className="font-poppins text-[1.75rem] sm:text-[2.25rem] leading-[1.15] tracking-[-0.02em] font-bold text-[#181715] max-w-[24ch]">
               Granted liberty by a judge. Kept in prison by a ₹15,000 gap.
             </h2>
@@ -99,8 +51,60 @@ export const VinayStory = () => {
                 className="inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#9B231B] hover:text-[#7A1913] transition-colors"
               >
                 <span>See how Rihaai bridges this gap step-by-step</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
+            </div>
+          </div>
+
+          {/* Visual Bail Bond Illustration + Structured Dossier (left column on desktop) */}
+          <div className="lg:col-span-5 lg:order-1">
+            <div className="bg-white rounded-2xl border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)] overflow-hidden">
+              <div className="bg-[#EFECE4] border-b border-[#E2DCCF] px-4 pt-4">
+                <img
+                  src={bailBondHandsImg}
+                  alt="Illustration of hands bound by a financial bail bond"
+                  width={767}
+                  height={401}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto aspect-[767/401] object-contain"
+                />
+              </div>
+
+              <div className="p-6 sm:p-7 border-b border-[#E2DCCF] flex items-baseline justify-between gap-4">
+                <h3 className="font-poppins text-[20px] font-bold text-[#181715]">
+                  {vinayCaseStudy.name}’s Case Dossier
+                </h3>
+                <span className="text-[12px] font-mono text-[#59534A] tabular-nums shrink-0">
+                  Case #014
+                </span>
+              </div>
+
+              <dl className="divide-y divide-[#F2EDE3] px-6 sm:px-7">
+                {dossierRows.map((row) => (
+                  <div
+                    key={row.label}
+                    className="py-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 items-baseline"
+                  >
+                    <dt className="text-[12px] font-mono text-[#59534A] uppercase tracking-wide">
+                      {row.label}
+                    </dt>
+                    <dd className="sm:col-span-2 text-[14px] font-roboto text-[#181715]">
+                      <span className={row.highlight || ""}>{row.value}</span>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div className="p-6 sm:p-7 bg-[#F2EDE3]/70 border-t border-[#E2DCCF]">
+                <div className="text-[11px] font-mono uppercase tracking-wider text-[#59534A] font-semibold mb-1.5">
+                  Primary Household Impact
+                </div>
+                <p className="text-[14px] font-roboto text-[#3D3933] leading-[1.6]">
+                  Widowed mother living in an informal settlement, earning daily domestic wages.
+                  Without Vinay’s income, the family faced immediate rent default and food insecurity.
+                </p>
+              </div>
             </div>
           </div>
         </div>

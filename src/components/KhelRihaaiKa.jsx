@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RIHAI_DATA } from "../data/rihaiData";
-import khelBoardImg from "../assets/khel-board.png";
+import khelBoardImg from "../assets/khel-board.webp";
 import { Sparkles, AlertCircle, Dices, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const KhelRihaaiKa = () => {
@@ -38,7 +38,7 @@ export const KhelRihaaiKa = () => {
             onClick={rollDie}
             className="self-start lg:self-auto shrink-0 inline-flex items-center gap-2.5 h-11 px-5 rounded-full bg-[#181715] hover:bg-[#2E2B27] text-white text-[13px] font-poppins font-semibold transition-colors"
           >
-            <Dices className="w-4 h-4 text-[#D14A3E]" />
+            <Dices className="w-4 h-4 text-[#E25B4F]" aria-hidden="true" />
             <span>Roll for Fortune (+ / -)</span>
           </button>
         </div>
@@ -50,11 +50,15 @@ export const KhelRihaaiKa = () => {
             <img
               src={khelBoardImg}
               alt="Khel Rihaai Ka — Original field education board game"
-              className="w-full aspect-[960/1408] rounded-xl object-contain bg-[#201E1B]"
+              width={640}
+              height={939}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto aspect-[640/939] rounded-xl object-contain bg-[#201E1B]"
             />
             <figcaption className="mt-3 px-1 flex items-center justify-between text-[12px] text-[#CFC8BA] font-roboto">
               <span>Original Game Board (खेल रिहाई का)</span>
-              <span className="font-mono text-[#D14A3E]">8 Stages</span>
+              <span className="font-mono text-[#E0685D]">8 Stages</span>
             </figcaption>
           </figure>
 
@@ -84,7 +88,7 @@ export const KhelRihaaiKa = () => {
                     >
                       <div
                         className={`text-[10px] font-mono uppercase tracking-wide ${
-                          isSelected ? "text-white/80" : "text-[#6B655B]"
+                          isSelected ? "text-white/90" : "text-[#59534A]"
                         }`}
                       >
                         {phase}
@@ -100,7 +104,7 @@ export const KhelRihaaiKa = () => {
               {/* Checkpoint Title & View Filter */}
               <div className="pt-4 border-t border-[#E2DCCF] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <div className="text-[11px] font-mono text-[#6B655B] uppercase tracking-wider">
+                  <div className="text-[11px] font-mono text-[#59534A] uppercase tracking-wider">
                     Active Checkpoint ({selectedStageIdx + 1} of {khelCards.stages.length})
                   </div>
                   <div className="font-poppins text-[16px] sm:text-[18px] font-bold text-[#181715] mt-0.5">
@@ -164,7 +168,7 @@ export const KhelRihaaiKa = () => {
                           Supported Outcome
                         </span>
                       </div>
-                      <Sparkles className="w-4 h-4 text-[#1F5E43]" />
+                      <Sparkles className="w-4 h-4 text-[#1F5E43]" aria-hidden="true" />
                     </div>
 
                     <h3 className="mt-5 font-poppins text-[19px] sm:text-[21px] font-bold text-[#181715]">
@@ -195,7 +199,7 @@ export const KhelRihaaiKa = () => {
                           Harsh Reality
                         </span>
                       </div>
-                      <AlertCircle className="w-4 h-4 text-[#9B231B]" />
+                      <AlertCircle className="w-4 h-4 text-[#9B231B]" aria-hidden="true" />
                     </div>
 
                     <h3 className="mt-5 font-poppins text-[19px] sm:text-[21px] font-bold text-[#181715]">
@@ -223,7 +227,7 @@ export const KhelRihaaiKa = () => {
                 onClick={() => setSelectedStageIdx((prev) => Math.max(0, prev - 1))}
                 className="inline-flex items-center gap-1.5 text-[13px] font-poppins font-semibold text-[#181715] disabled:opacity-35 disabled:cursor-not-allowed hover:text-[#9B231B] transition-colors"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-4 h-4" aria-hidden="true" />
                 <span>Previous Checkpoint</span>
               </button>
 
@@ -236,7 +240,7 @@ export const KhelRihaaiKa = () => {
                 className="inline-flex items-center gap-1.5 text-[13px] font-poppins font-semibold text-[#181715] disabled:opacity-35 disabled:cursor-not-allowed hover:text-[#9B231B] transition-colors"
               >
                 <span>Next Checkpoint</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4" aria-hidden="true" />
               </button>
             </div>
           </div>
