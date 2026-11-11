@@ -9,7 +9,7 @@ export const RIHAI_DATA = {
     partnerOrg: "Project Second Chance",
     initiationDate: "November 2025",
     phonePrimary: "+91 90848-93438",
-    phoneSecondary: "+91 99994 81241",
+    phoneSecondary: "+91 88005-73488",
     emailPrimary: "projectrihaai@gmail.com",
     emailSecondary: "secondchance.psc@gmail.com",
     website: "https://tyciafoundation.org",
