@@ -27,7 +27,7 @@ export const FAQ = () => {
 
             <div className="bg-[#F2EDE3] rounded-2xl p-5 sm:p-6 border border-[#E2DCCF] space-y-4">
               <div className="flex items-start gap-3.5">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#E2DCCF] flex items-center justify-center text-[#C93E31] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#E2DCCF] flex items-center justify-center text-[#9B231B] shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>

@@ -55,7 +55,7 @@ export const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="py-1 whitespace-nowrap hover:text-[#C93E31] transition-colors"
+                className="py-1 whitespace-nowrap hover:text-[#9B231B] transition-colors"
               >
                 {link.name}
               </a>
@@ -74,7 +74,7 @@ export const Navbar = () => {
               href={RIHAI_DATA.meta.donationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 h-9 px-4 bg-[#C93E31] hover:bg-[#A83126] text-white text-[13px] font-poppins font-semibold rounded-full transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-1.5 h-9 px-4 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[13px] font-poppins font-semibold rounded-full transition-colors whitespace-nowrap"
             >
               <span>Donate</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -103,7 +103,7 @@ export const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="py-3 text-[15px] font-poppins font-medium text-[#181715] hover:text-[#C93E31]"
+                className="py-3 text-[15px] font-poppins font-medium text-[#181715] hover:text-[#9B231B]"
               >
                 {link.name}
               </a>
@@ -121,7 +121,7 @@ export const Navbar = () => {
               href={RIHAI_DATA.meta.donationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 h-11 text-sm font-poppins font-semibold rounded-full bg-[#C93E31] text-white hover:bg-[#A83126]"
+              className="inline-flex items-center justify-center gap-1.5 h-11 text-sm font-poppins font-semibold rounded-full bg-[#9B231B] text-white hover:bg-[#7A1913]"
             >
               <span>Donate Now</span>
               <ArrowUpRight className="w-4 h-4" />

@@ -10,7 +10,7 @@ export const Hero = () => {
           <div className="lg:col-span-7">
             <h1 className="font-poppins text-[2.25rem] sm:text-[3rem] lg:text-[3.4rem] leading-[1.09] tracking-[-0.025em] font-bold text-[#181715] max-w-[18ch]">
               In India, bail is granted by law.{" "}
-              <span className="text-[#C93E31]">Yet freedom is still priced.</span>
+              <span className="text-[#9B231B]">Yet freedom is still priced.</span>
             </h1>
 
             <p className="mt-6 font-roboto text-[16px] sm:text-[18px] text-[#3D3933] leading-[1.65] max-w-[56ch]">
@@ -23,7 +23,7 @@ export const Hero = () => {
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <a
                 href="#impact"
-                className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#C93E31] hover:bg-[#A83126] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
               >
                 <span>Fund a Prisoner’s Release</span>
                 <ArrowRight className="w-4 h-4" />
@@ -33,7 +33,7 @@ export const Hero = () => {
                 href="#khel"
                 className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-transparent hover:bg-[#F2EDE3] text-[#181715] text-[14px] font-poppins font-semibold rounded-full border border-[#D4CCB9] transition-colors"
               >
-                <Compass className="w-4 h-4 text-[#C93E31]" />
+                <Compass className="w-4 h-4 text-[#9B231B]" />
                 <span>Explore Khel Rihaai Ka</span>
               </a>
             </div>
@@ -41,7 +41,7 @@ export const Hero = () => {
             {/* Aligned Proof Strip */}
             <div className="mt-10 pt-6 border-t border-[#E2DCCF] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="flex items-start gap-2.5">
-                <ShieldCheck className="w-4 h-4 text-[#C93E31] shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" />
                 <div className="text-[13px] leading-snug text-[#4A453E]">
                   <strong className="block font-poppins font-semibold text-[#181715]">
                     Court Bank FDs
@@ -51,7 +51,7 @@ export const Hero = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <HeartHandshake className="w-4 h-4 text-[#C93E31] shrink-0 mt-0.5" />
+                <HeartHandshake className="w-4 h-4 text-[#9B231B] shrink-0 mt-0.5" />
                 <div className="text-[13px] leading-snug text-[#4A453E]">
                   <strong className="block font-poppins font-semibold text-[#181715]">
                     Pro-Bono Vetting
@@ -61,7 +61,7 @@ export const Hero = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <span className="font-mono text-[13px] font-semibold text-[#C93E31] tabular-nums shrink-0 mt-0.5">
+                <span className="font-mono text-[13px] font-semibold text-[#9B231B] tabular-nums shrink-0 mt-0.5">
                   ₹6L
                 </span>
                 <div className="text-[13px] leading-snug text-[#4A453E]">

@@ -55,7 +55,7 @@ export const ImpactCalculator = () => {
               </div>
             </div>
             <div className="text-left sm:text-right">
-              <div className="text-[12px] font-mono text-[#C93E31] font-semibold tabular-nums">
+              <div className="text-[12px] font-mono text-[#9B231B] font-semibold tabular-nums">
                 {percentage}% REACHED
               </div>
               <div className="text-[13px] text-[#4A453E] font-roboto tabular-nums">
@@ -66,7 +66,7 @@ export const ImpactCalculator = () => {
 
           <div className="w-full bg-[#E2DCCF] h-2.5 rounded-full overflow-hidden">
             <div
-              className="bg-[#C93E31] h-full rounded-full transition-all duration-500"
+              className="bg-[#9B231B] h-full rounded-full transition-all duration-500"
               style={{ width: `${percentage}%` }}
             />
           </div>
@@ -110,7 +110,7 @@ export const ImpactCalculator = () => {
                         </span>
                         <div
                           className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                            isSelected ? "bg-white/10 text-white" : "bg-[#FAF9F5] text-[#C93E31]"
+                            isSelected ? "bg-white/10 text-white" : "bg-[#FAF9F5] text-[#9B231B]"
                           }`}
                         >
                           <Icon className="w-4 h-4" />
@@ -119,7 +119,7 @@ export const ImpactCalculator = () => {
 
                       <div
                         className={`mt-3 text-[13px] font-poppins font-semibold ${
-                          isSelected ? "text-[#E66558]" : "text-[#C93E31]"
+                          isSelected ? "text-[#D14A3E]" : "text-[#9B231B]"
                         }`}
                       >
                         {tier.title}
@@ -167,7 +167,7 @@ export const ImpactCalculator = () => {
                   value={customAmount}
                   onChange={handleCustomChange}
                   placeholder="e.g. 50000"
-                  className="w-full sm:w-40 h-10 px-3.5 border border-[#D4CCB9] rounded-xl text-[14px] font-mono text-[#181715] tabular-nums focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15"
+                  className="w-full sm:w-40 h-10 px-3.5 border border-[#D4CCB9] rounded-xl text-[14px] font-mono text-[#181715] tabular-nums focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15"
                 />
               </div>
             </div>
@@ -192,7 +192,7 @@ export const ImpactCalculator = () => {
               </div>
               <div className="py-3 flex items-center justify-between gap-4 text-[13.5px]">
                 <span className="text-[#4A453E]">Freedom &amp; Reintegration</span>
-                <span className="font-mono font-bold text-[#C93E31] tabular-nums">
+                <span className="font-mono font-bold text-[#9B231B] tabular-nums">
                   ~{inmatesFreed} Individuals
                 </span>
               </div>
@@ -221,7 +221,7 @@ export const ImpactCalculator = () => {
               href={RIHAI_DATA.meta.donationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-7 w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#C93E31] hover:bg-[#A83126] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
+              className="mt-7 w-full inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#9B231B] hover:bg-[#7A1913] text-white text-[14px] font-poppins font-semibold rounded-full transition-colors"
             >
               <span>Proceed to Verified Campaign</span>
               <ArrowUpRight className="w-4 h-4" />

@@ -1,4 +1,5 @@
 import { RIHAI_DATA } from "../data/rihaiData";
+import bailBondHandsImg from "../assets/bail-bond-hands.png";
 import { ArrowRight } from "lucide-react";
 
 export const VinayStory = () => {
@@ -15,7 +16,7 @@ export const VinayStory = () => {
     {
       label: "Financial Barrier",
       value: "₹15,000 Bail Bond • Zero family savings",
-      highlight: "text-[#C93E31] font-medium",
+      highlight: "text-[#9B231B] font-medium",
     },
   ];
 
@@ -23,9 +24,17 @@ export const VinayStory = () => {
     <section id="case-study" className="py-16 sm:py-24 bg-[#FAF9F5]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left Column: Structured Dossier Table */}
+          {/* Left Column: Visual Bail Bond Illustration + Structured Dossier */}
           <div className="lg:col-span-5">
             <div className="bg-white rounded-2xl border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)] overflow-hidden">
+              <div className="bg-[#EFECE4] border-b border-[#E2DCCF] px-4 pt-4">
+                <img
+                  src={bailBondHandsImg}
+                  alt="Illustration of hands bound by a financial bail bond"
+                  className="w-full aspect-[767/401] object-contain"
+                />
+              </div>
+
               <div className="p-6 sm:p-7 border-b border-[#E2DCCF] flex items-baseline justify-between gap-4">
                 <h3 className="font-poppins text-[20px] font-bold text-[#181715]">
                   {vinayCaseStudy.name}’s Case Dossier
@@ -37,7 +46,10 @@ export const VinayStory = () => {
 
               <dl className="divide-y divide-[#F2EDE3] px-6 sm:px-7">
                 {dossierRows.map((row) => (
-                  <div key={row.label} className="py-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 items-baseline">
+                  <div
+                    key={row.label}
+                    className="py-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 items-baseline"
+                  >
                     <dt className="text-[12px] font-mono text-[#6B655B] uppercase tracking-wide">
                       {row.label}
                     </dt>
@@ -84,7 +96,7 @@ export const VinayStory = () => {
             <div className="mt-7">
               <a
                 href="#process"
-                className="inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#C93E31] hover:text-[#A83126] transition-colors"
+                className="inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#9B231B] hover:text-[#7A1913] transition-colors"
               >
                 <span>See how Rihaai bridges this gap step-by-step</span>
                 <ArrowRight className="w-4 h-4" />

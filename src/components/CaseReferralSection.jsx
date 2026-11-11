@@ -23,7 +23,7 @@ export const CaseReferralSection = () => {
   };
 
   const inputClass =
-    "w-full h-11 px-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15 transition-colors";
+    "w-full h-11 px-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors";
 
   return (
     <section id="referral" className="py-16 sm:py-24 bg-[#F2EDE3] border-t border-[#E2DCCF]">
@@ -44,7 +44,7 @@ export const CaseReferralSection = () => {
 
             <div className="space-y-3">
               <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#C93E31] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#9B231B] shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
@@ -52,11 +52,11 @@ export const CaseReferralSection = () => {
                     Direct Case Helpline
                   </div>
                   <div className="mt-0.5 flex flex-wrap gap-x-2.5 text-[14px] font-poppins font-semibold text-[#181715] tabular-nums">
-                    <a href={`tel:${RIHAI_DATA.meta.phonePrimary}`} className="hover:text-[#C93E31]">
+                    <a href={`tel:${RIHAI_DATA.meta.phonePrimary}`} className="hover:text-[#9B231B]">
                       {RIHAI_DATA.meta.phonePrimary}
                     </a>
                     <span className="text-[#ABA496]">•</span>
-                    <a href={`tel:${RIHAI_DATA.meta.phoneSecondary}`} className="hover:text-[#C93E31]">
+                    <a href={`tel:${RIHAI_DATA.meta.phoneSecondary}`} className="hover:text-[#9B231B]">
                       {RIHAI_DATA.meta.phoneSecondary}
                     </a>
                   </div>
@@ -64,7 +64,7 @@ export const CaseReferralSection = () => {
               </div>
 
               <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#E2DCCF] flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#C93E31] shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#9B231B] shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
@@ -73,7 +73,7 @@ export const CaseReferralSection = () => {
                   </div>
                   <a
                     href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
-                    className="mt-0.5 block text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#C93E31] break-all"
+                    className="mt-0.5 block text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#9B231B] break-all"
                   >
                     {RIHAI_DATA.meta.emailPrimary}
                   </a>
@@ -83,7 +83,7 @@ export const CaseReferralSection = () => {
 
             <div className="bg-[#FAF9F5] p-5 rounded-2xl border border-[#E2DCCF] text-[13.5px] font-roboto text-[#4A453E] leading-[1.6] space-y-1.5">
               <div className="font-poppins font-semibold text-[#181715] flex items-center gap-2">
-                <AlertCircle className="w-4 h-4 text-[#C93E31] shrink-0" />
+                <AlertCircle className="w-4 h-4 text-[#9B231B] shrink-0" />
                 <span>Notice on Submissions</span>
               </div>
               <p>
@@ -251,7 +251,7 @@ export const CaseReferralSection = () => {
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Brief details about the family's financial situation, whether local surety is available, etc."
-                      className="w-full p-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#C93E31] focus:ring-2 focus:ring-[#C93E31]/15 transition-colors"
+                      className="w-full p-3.5 rounded-xl border border-[#D4CCB9] bg-white text-[14px] text-[#181715] placeholder:text-[#8E877A] focus:outline-hidden focus:border-[#9B231B] focus:ring-2 focus:ring-[#9B231B]/15 transition-colors"
                     />
                   </div>
 

@@ -42,7 +42,7 @@ export const HowItWorks = () => {
                   <div className="flex items-baseline gap-3.5 min-w-0">
                     <span
                       className={`font-mono text-[12px] font-semibold tabular-nums shrink-0 ${
-                        isActive ? "text-[#E66558]" : "text-[#6B655B]"
+                        isActive ? "text-[#D14A3E]" : "text-[#6B655B]"
                       }`}
                     >
                       0{s.step}
@@ -62,7 +62,7 @@ export const HowItWorks = () => {
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 shrink-0 transition-transform ${
-                      isActive ? "text-[#E66558] translate-x-0.5" : "text-[#ABA496]"
+                      isActive ? "text-[#D14A3E] translate-x-0.5" : "text-[#ABA496]"
                     }`}
                   />
                 </button>
@@ -73,7 +73,7 @@ export const HowItWorks = () => {
           {/* Right Panel: Active Stage Detail */}
           <div className="lg:col-span-7 lg:sticky lg:top-24 bg-white rounded-2xl p-6 sm:p-9 border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)]">
             <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-[#F2EDE3]">
-              <span className="font-mono text-[12px] font-semibold text-[#C93E31] uppercase tracking-wider tabular-nums">
+              <span className="font-mono text-[12px] font-semibold text-[#9B231B] uppercase tracking-wider tabular-nums">
                 Stage 0{current.step} of 0{steps.length} • {current.tag}
               </span>
               <span className="font-mono text-[12px] text-[#6B655B] tabular-nums">
@@ -112,7 +112,7 @@ export const HowItWorks = () => {
             <div className="mt-8 pt-6 border-t border-[#E2DCCF] space-y-5">
               <div className="w-full bg-[#F2EDE3] h-2 rounded-full overflow-hidden">
                 <div
-                  className="bg-[#C93E31] h-full transition-all duration-300 rounded-full"
+                  className="bg-[#9B231B] h-full transition-all duration-300 rounded-full"
                   style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
                 />
               </div>
@@ -142,7 +142,7 @@ export const HowItWorks = () => {
 
                 <a
                   href="#referral"
-                  className="text-[13px] font-poppins font-semibold text-[#C93E31] hover:text-[#A83126] transition-colors"
+                  className="text-[13px] font-poppins font-semibold text-[#9B231B] hover:text-[#7A1913] transition-colors"
                 >
                   Submit a case for review →
                 </a>

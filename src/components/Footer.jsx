@@ -80,13 +80,13 @@ export const Footer = () => {
             </h4>
             <div className="space-y-3 text-[13.5px] text-[#CFC8BA] font-roboto">
               <div className="flex items-center gap-2.5 tabular-nums">
-                <Phone className="w-4 h-4 text-[#E66558] shrink-0" />
+                <Phone className="w-4 h-4 text-[#D14A3E] shrink-0" />
                 <span>
                   {RIHAI_DATA.meta.phonePrimary} • {RIHAI_DATA.meta.phoneSecondary}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#E66558] shrink-0" />
+                <Mail className="w-4 h-4 text-[#D14A3E] shrink-0" />
                 <a
                   href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
                   className="hover:text-white transition-colors"
@@ -95,7 +95,7 @@ export const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-[#E66558] shrink-0" />
+                <Globe className="w-4 h-4 text-[#D14A3E] shrink-0" />
                 <a
                   href={RIHAI_DATA.meta.website}
                   target="_blank"
@@ -113,7 +113,7 @@ export const Footer = () => {
                 href={RIHAI_DATA.meta.donationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 h-10 px-5 text-[13px] font-poppins font-semibold bg-[#C93E31] hover:bg-[#A83126] text-white rounded-full transition-colors"
+                className="inline-flex items-center gap-1.5 h-10 px-5 text-[13px] font-poppins font-semibold bg-[#9B231B] hover:bg-[#7A1913] text-white rounded-full transition-colors"
               >
                 <span>Support Campaign on Milaap</span>
                 <ArrowUpRight className="w-4 h-4" />

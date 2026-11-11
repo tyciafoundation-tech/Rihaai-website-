@@ -1,4 +1,5 @@
 import { RIHAI_DATA } from "../data/rihaiData";
+import khelBarsImg from "../assets/khel-bars-silhouette.png";
 import { ArrowRight } from "lucide-react";
 
 export const CrisisMetrics = () => {
@@ -28,7 +29,7 @@ export const CrisisMetrics = () => {
                 <div className="font-poppins text-[2rem] sm:text-[2.25rem] leading-none font-extrabold text-[#181715] tracking-[-0.03em] tabular-nums">
                   {stat.value}
                 </div>
-                <h3 className="mt-3 font-poppins text-[15px] font-semibold text-[#C93E31]">
+                <h3 className="mt-3 font-poppins text-[15px] font-semibold text-[#9B231B]">
                   {stat.label}
                 </h3>
                 <p className="mt-2.5 text-[14px] font-roboto text-[#4A453E] leading-[1.6]">
@@ -43,22 +44,32 @@ export const CrisisMetrics = () => {
           ))}
         </div>
 
-        {/* Aligned Systemic Insight Callout */}
-        <div className="mt-8 bg-white rounded-2xl p-6 sm:p-8 border border-[#E2DCCF] flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="max-w-[68ch] space-y-1.5">
-            <h3 className="font-poppins text-[14px] font-semibold text-[#C93E31]">
-              From the 2024 Special Release Drive
-            </h3>
-            <p className="text-[15px] sm:text-[16px] text-[#181715] font-roboto leading-[1.65]">
-              “In a 2024 nationwide campaign, 951 prisoners were officially cleared for release. Yet 617
-              individuals remained locked behind bars because their families could not produce an eligible
-              surety. Bail without the means to pay is no bail at all.”
-            </p>
+        {/* Aligned Systemic Insight Callout with PDF Illustration */}
+        <div className="mt-8 bg-white rounded-2xl p-6 sm:p-7 border border-[#E2DCCF] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5 max-w-[74ch]">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-xl overflow-hidden border border-[#E2DCCF] bg-[#759B8F]">
+              <img
+                src={khelBarsImg}
+                alt="Illustration of an undertrial prisoner waiting behind bars"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <h3 className="font-poppins text-[14px] font-semibold text-[#9B231B]">
+                From the 2024 Special Release Drive
+              </h3>
+              <p className="text-[15px] sm:text-[16px] text-[#181715] font-roboto leading-[1.65]">
+                “In a 2024 nationwide campaign, 951 prisoners were officially cleared for release. Yet 617
+                individuals remained locked behind bars because their families could not produce an eligible
+                surety. Bail without the means to pay is no bail at all.”
+              </p>
+            </div>
           </div>
 
           <a
             href="#case-study"
-            className="shrink-0 inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#C93E31] transition-colors whitespace-nowrap"
+            className="shrink-0 inline-flex items-center gap-2 text-[14px] font-poppins font-semibold text-[#181715] hover:text-[#9B231B] transition-colors whitespace-nowrap"
           >
             <span>Read Vinay’s Story</span>
             <ArrowRight className="w-4 h-4" />

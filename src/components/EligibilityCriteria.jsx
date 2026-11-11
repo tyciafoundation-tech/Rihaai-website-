@@ -41,7 +41,7 @@ export const EligibilityCriteria = () => {
                 key={item.title}
                 className="bg-white rounded-2xl p-6 sm:p-7 border border-[#E2DCCF] shadow-[0_2px_10px_rgba(24,23,21,0.03)]"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#C93E31]">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF9F5] border border-[#E2DCCF] flex items-center justify-center text-[#9B231B]">
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="mt-5 font-poppins text-[17px] font-bold text-[#181715]">
@@ -68,7 +68,7 @@ export const EligibilityCriteria = () => {
             </div>
             <a
               href={`mailto:${RIHAI_DATA.meta.emailPrimary}`}
-              className="shrink-0 inline-flex items-center gap-1.5 text-[13px] font-poppins font-semibold text-[#E66558] hover:text-white transition-colors"
+              className="shrink-0 inline-flex items-center gap-1.5 text-[13px] font-poppins font-semibold text-[#D14A3E] hover:text-white transition-colors"
             >
               <span>Contact Legal Review Committee</span>
               <ArrowRight className="w-4 h-4" />
@@ -81,7 +81,7 @@ export const EligibilityCriteria = () => {
                 key={rule}
                 className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10 text-[14px] text-[#E8E2D5] leading-[1.55] font-roboto"
               >
-                <XCircle className="w-4 h-4 text-[#E66558] shrink-0 mt-0.5" />
+                <XCircle className="w-4 h-4 text-[#D14A3E] shrink-0 mt-0.5" />
                 <span>{rule}</span>
               </div>
             ))}
