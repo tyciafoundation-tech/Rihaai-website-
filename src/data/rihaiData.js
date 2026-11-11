@@ -341,20 +341,18 @@ export const RIHAI_DATA = {
       linkedin:
         "https://www.linkedin.com/in/shivani-kumari-b91bb837b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       summary: [
-        "A social development professional and Founder of Rihaai, Shivani works to dismantle financial, legal, and social barriers facing economically disadvantaged and vulnerable individuals in the criminal justice system—bridging the gap between receiving a bail order and securing the surety, bond amount, and release formalities needed to walk free.",
-        "Rooted in grassroots community engagement and prison-based interventions at Tihar Jail with incarcerated individuals and their families, her work spans legal awareness, counselling, case coordination, community mobilisation, resource mobilisation, financial assistance, and post-release rehabilitation—building a compassionate and inclusive support system for restoring dignity, rebuilding family connections, social reintegration, confidence, and independence so no one remains behind bars due to poverty or limited institutional support.",
+        "Shivani Kumari is a social development professional specialising in bail support, legal assistance and rehabilitation. Her work focuses on addressing the legal, financial and social barriers that prevent economically disadvantaged individuals from securing their release, while supporting families through legal awareness, counselling, case coordination and post release rehabilitation.",
       ],
     },
     {
       id: "karan-kumar",
       name: "Karan Kumar",
-      role: "Co-founder, Rihaai",
-      tagline: "Prison Reform, Access to Justice & Technology-Driven Legal Aid.",
+      role: "Co-Founder, Rihaai",
+      tagline: "Prison Reform | Access to Justice | Technology Driven Legal Aid.",
       linkedin:
         "https://www.linkedin.com/in/karan-kumar-61746b2b6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       summary: [
-        "Karan Kumar is a social sector practitioner and Co-founder of Rihaai. With a background in Social Work, he is passionate about prison reform, access to justice, and the rights of marginalized communities.",
-        "His work focuses on bridging gaps in the criminal justice system through technology-driven legal aid, community engagement, and innovative social interventions—building a more inclusive and humane justice system where every individual has an opportunity for dignity, freedom, and a second chance.",
+        "Karan Kumar is a social sector practitioner working at the intersection of prison reform, technology and access to justice. He leads programme operations, technology driven interventions, community outreach and institutional partnerships at Rihaai. His work focuses on developing accessible support systems, strengthening implementation and connecting vulnerable individuals and their families with the resources they need to navigate the criminal justice system.",
       ],
     },
   ],
