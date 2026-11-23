@@ -14,8 +14,8 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-6 font-roboto text-[16px] sm:text-[18px] text-[#3D3933] leading-[1.65] max-w-[56ch]">
-              Over 24,000 undertrials across India remain incarcerated despite winning bail—purely
-              because their families cannot furnish a ₹15,000–₹20,000 court bond. Rihaai breaks this
+              Over 24,000 undertrials across India remain incarcerated despite winning bail purely
+              because their families cannot furnish a ₹15,000 to ₹20,000 court bond. Rihaai breaks this
               barrier through verified court fixed deposits and community reintegration.
             </p>
 
