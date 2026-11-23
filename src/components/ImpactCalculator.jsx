@@ -26,7 +26,7 @@ export const ImpactCalculator = () => {
   const bondsFunded = Math.floor(currentAmount / 15000);
 
   const goal = RIHAI_DATA.meta.campaignGoal;
-  const raisedSimulated = 245000;
+  const raisedSimulated = 125000;
   const percentage = Math.round((raisedSimulated / goal) * 100);
 
   return (
@@ -59,7 +59,7 @@ export const ImpactCalculator = () => {
                 {percentage}% REACHED
               </div>
               <div className="text-[13px] text-[#4A453E] font-roboto tabular-nums">
-                ₹2,45,000 raised • 12 lives assisted
+                ₹1,25,000 raised • 12 lives assisted
               </div>
             </div>
           </div>
